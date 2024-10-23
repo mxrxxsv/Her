@@ -1,36 +1,41 @@
-body{
+body {
     background-image: url(https://marketplace.canva.com/EAF-1HweQqs/2/0/900w/canva-pink-abstract-aesthetic-blank-background-instagram-story-72Jmt_raM5o.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    margin: 0;
+    padding: 0;
 }
 
 .container {
     position: relative;
     top: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
-    justify-items: center;
+    text-align: center;
 }
 
-.pic{
+.pic {
     width: 270px;
     height: 220px;
-    border:2px solid #F7B5CA;
+    border: 2px solid #F7B5CA;
     border-radius: 10px;
     margin: 24px;
 }
 
-img{
+img {
     height: 100%;
     width: 100%;
     border-radius: 10px;
 }
 
-.txt{
+.txt {
     color: #F0A8D0;
     padding-bottom: 8px;
 }
 
-.butn{
+.butn {
     height: 40px;
     width: 150px;
     color: #ffffff;
@@ -39,11 +44,48 @@ img{
     border-radius: 20px;
 }
 
-.butn:hover{
+.butn:hover {
     background: #F7B5CA;
 }
 
-a{
-
+a {
     text-decoration: none;
+}
+
+/* Media Queries for responsiveness */
+
+/* For tablets (iPad, etc.) */
+@media (max-width: 768px) {
+    .container {
+        top: 100px;
+    }
+
+    .pic {
+        width: 220px;
+        height: 180px;
+        margin: 16px;
+    }
+
+    .butn {
+        width: 130px;
+        height: 35px;
+    }
+}
+
+/* For mobile devices */
+@media (max-width: 480px) {
+    .container {
+        top: 50px;
+    }
+
+    .pic {
+        width: 180px;
+        height: 150px;
+        margin: 12px;
+    }
+
+    .butn {
+        width: 120px;
+        height: 30px;
+    }
 }
