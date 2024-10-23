@@ -1,11 +1,3 @@
-body {
-    background-image: url(https://marketplace.canva.com/EAF-1HweQqs/2/0/900w/canva-pink-abstract-aesthetic-blank-background-instagram-story-72Jmt_raM5o.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    margin: 0;
-    padding: 0;
-}
-
 .container {
     position: relative;
     top: 200px;
@@ -39,7 +31,7 @@ img {
     height: 40px;
     width: 150px;
     color: #ffffff;
-    background: #F0A8D0;
+    background: rgb(240, 168, 208);
     border: none;
     border-radius: 20px;
 }
@@ -52,9 +44,7 @@ a {
     text-decoration: none;
 }
 
-/* Media Queries for responsiveness */
 
-/* For tablets (iPad, etc.) */
 @media (max-width: 768px) {
     .container {
         top: 100px;
@@ -70,9 +60,29 @@ a {
         width: 130px;
         height: 35px;
     }
+
+    .card {
+        padding-left: 20px;
+        padding-right: 20px;
+        background-size: auto 1.2rem, 2px 100%;
+    }
+
+    .cards_item {
+        flex-direction: column;
+        padding: 0.5rem;
+    }
+
+    .card_image {
+        height: calc(10 * 1.2rem);
+    }
+
+    .card_image:before, .card_image:after {
+        width: 15px;
+        height: 35px;
+    }
 }
 
-/* For mobile devices */
+
 @media (max-width: 480px) {
     .container {
         top: 50px;
@@ -88,4 +98,110 @@ a {
         width: 120px;
         height: 30px;
     }
+
+    .card {
+        padding-left: 15px;
+        padding-right: 15px;
+        background-size: auto 1rem, 2px 100%;
+    }
+
+    .cards_item {
+        padding: 0.25rem;
+    }
+
+    .card_image {
+        height: calc(8 * 1.2rem);
+    }
+
+    .card_image:before, .card_image:after {
+        width: 10px;
+        height: 25px;
+    }
+
+    h2.card_title {
+        font-size: 1.1em;
+    }
+}
+
+.header {
+    text-align: center;
+}
+
+.main {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.cards_item {
+    display: flex;
+    padding: 1rem;
+}
+
+.card_image {
+    height: calc(13 * 1.2rem);
+    padding: 1.2rem 1.2rem 0;
+    position: relative;
+}
+
+.card_image:before,
+.card_image:after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    left: 60%;
+    top: 0;
+    height: 45px;
+    background: #e6e6e6b8;
+    transform: rotate(45deg);
+}
+
+.card_image:after {
+    transform: rotate(-45deg);
+    top: auto;
+    bottom: -22px;
+    left: 40%;
+}
+
+.card_image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cards_item {
+    filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.25));
+}
+
+.card {
+    background-color: white;
+    border-radius: 0.25rem;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    padding-left: 30px;
+    background: repeating-linear-gradient(#0000 0 calc(1.2rem - 1px), #66afe1 0 1.2rem) right bottom / 100% 100%, linear-gradient(rgba(240, 168, 208, 0.689) 0 0) 30px 0 / 2px 100% #fff;
+    background-repeat: no-repeat;
+    line-height: 1.2rem;
+    -webkit-mask: radial-gradient(circle 0.8rem at 2px 50%, #0000 98%, #000) 0 0 / 100% 2.4rem;
+}
+
+.card_content {
+    padding: 1.2rem;
+}
+
+h2.card_title, p {
+    margin: 1.2rem 0;
+}
+
+h2.card_title {
+    font-size: 1.3em;
+    color: #F0A8D0;
 }
